@@ -4,6 +4,15 @@ API REST construida con **Node.js**, **Express**, **TypeScript** y **Mongoose** 
 
 ---
 
+
+##EJERCICIO SEMINARIO 
+Se han hecho preguntas a la IA para entender ciertos aspectos del código. El código se ha picado a mano. 
+w/Pablo Santamaría
+
+
+
+
+
 ## Tecnologías
 
 | Paquete | Versión | Uso |
