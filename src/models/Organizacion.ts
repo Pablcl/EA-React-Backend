@@ -12,10 +12,13 @@ const OrganizacionSchema: Schema = new Schema(
     },
     {
         versionKey: false,
+        // Hace que el campo virtual "usuarios" salga al convertir el documento a JSON.
         toJSON: { virtuals: true },
+        // Hace lo mismo cuando el documento se pasa a un objeto normal.
         toObject: { virtuals: true }
     }
 );
+// Relacion virtual: busca los usuarios cuya organizacion coincide con este _id.
 OrganizacionSchema.virtual('usuarios', {
     ref: 'Usuario',
     localField: '_id',

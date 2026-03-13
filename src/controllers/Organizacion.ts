@@ -21,9 +21,11 @@ const readOrganizacion = async (req: Request, res: Response, next: NextFunction)
 };
 
 const readUsuariosByOrganizacion = async (req: Request, res: Response, next: NextFunction) => {
+    // Sacamos el id de la organizacion desde la URL.
     const organizacionId = req.params.organizacionId;
 
     try {
+        // Pedimos la organizacion con sus usuarios ya incluidos.
         const organizacion = await OrganizacionService.getOrganizacionConUsuarios(organizacionId);
 
         return organizacion

@@ -156,6 +156,7 @@ router.put('/:organizacionId', ValidateJoi(Schemas.organizacion.update), control
 router.delete('/:organizacionId', controller.deleteOrganizacion);
 
 
+// Ruta del ejercicio: devuelve una organizacion concreta con sus usuarios.
 /**
  * @openapi
  * /organizaciones/{organizacionId}/usuarios:

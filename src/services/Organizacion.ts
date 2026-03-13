@@ -14,6 +14,7 @@ const getOrganizacion = async (organizacionId: string): Promise<IOrganizacionMod
 };
 
 const getOrganizacionConUsuarios = async (organizacionId: string): Promise<IOrganizacionModel | null> => {
+    // Carga la organizacion y rellena el campo virtual "usuarios".
     return await Organizacion.findById(organizacionId).populate('usuarios');
 };
 
