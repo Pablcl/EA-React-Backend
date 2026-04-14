@@ -8,9 +8,9 @@ Para probarlo, se puede hacer CRUD normal de usuarios/organizaciones y luego ent
 
 La IA se ha usado para:
 
-entender mejor el flujo completo frontend-backend
-ordenar la implementación por archivos y pasos
-apoyo en la creacion de componente, hook etc 
-ajustes de sintaxis en validaciones y TS
+- entender mejor el flujo completo frontend-backend
+- ordenar la implementación por archivos y pasos
+- apoyo en la creacion de componente, hook etc 
+- ajustes de sintaxis en validaciones y TS
 
 IA usada: ChatGPT 5.3
