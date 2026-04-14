@@ -2,6 +2,7 @@ import Joi, { ObjectSchema } from 'joi';
 import { NextFunction, Request, Response } from 'express';
 import { IOrganizacion } from '../models/Organizacion';
 import { IUsuario } from '../models/Usuario';
+import { IAccion } from '../models/Accion';
 import Logging from '../library/Logging';
 
 export const ValidateJoi = (schema: ObjectSchema) => {
@@ -43,6 +44,17 @@ export const Schemas = {
             name: Joi.string().required(),
             email: Joi.string().email().required(),
             password: Joi.string().min(6).required()
+        })
+    },
+    accion: {
+        create: Joi.object<IAccion>({
+            resourceType: Joi.string().valid('usuario', 'organizacion').required(),
+            operation: Joi.string().valid('create', 'update', 'delete').required(),
+            resourceId: Joi.string()
+                .regex(/^[0-9a-fA-F]{24}$/)
+                .required(),
+            resourceName: Joi.string().required(),
+            date: Joi.date().optional()
         })
     }
 };
